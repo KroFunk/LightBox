@@ -1,0 +1,52 @@
+<HTML>
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>LightBox Demo | &copy; Robin Wright 2015</title>
+<script>
+function ShowHide(id) {
+var element = document.getElementById(id);
+if(element.style.display == "block") {
+element.style.display = "none";
+}
+else {
+element.style.display = "block";
+}
+}
+</script>
+<style>
+body {
+font-family:sans-serif;
+}
+.demoButton {
+padding:15px;
+color:#fff;
+background:#569AF8;
+border-radius:2px;
+border:1px solid #4D8ADF;
+font-family:sans-serif;
+text-decoration:none;
+text-shadow:1px 1px 1px #333;
+}
+.codeButton {
+padding:15px;
+color:#fff;
+background:#bbb;
+border-radius:2px;
+border:1px solid #aaa;
+font-family:sans-serif;
+text-decoration:none;
+text-shadow:1px 1px 1px #333;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to Robin&#39;s LightBox Demo!</h1>
+Basic LightBox:<br/><br/>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://chalkcreation.co.uk',640,480);">Open LightBox!</a>
+<a class='codeButton' href="javascript:void(0)" onclick="openwrapper('http://chalkcreation.co.uk',640,480);">View Code!</a>
+<br/><br/>
+LightBox with border:<br/><br/>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://chalkcreation.co.uk',640,480);">Open LightBox!</a>
+<a class='codeButton' href="javascript:void(0)" onclick="openwrapper('http://chalkcreation.co.uk',640,480);">View Code!</a>
+<script type="text/javascript" src="../lightbox.wrapper.js"></script>
+</body>
+</HTML>
