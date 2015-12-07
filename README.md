@@ -1,4 +1,4 @@
-<h1>Welcome to Robin&#39;s LightBox Demo!</h1>
+<h1>Robin&#39;s LightBox!</h1>
 <p>The objective of this LightBox is to be simple, and to stay simple! In it's current state, there are only 4 options; URL, width, height and border.</p>
 <p>LightBox is called from a javascript event. This means you can call LightBox from anything from a button through to an image. For the best results use an 'OnClick' event, but it should work with any of them, you can read more on w3schools: <a href='http://www.w3schools.com/jsref/dom_obj_event.asp' target='_new'>http://www.w3schools.com/jsref/dom_obj_event.asp</a>
 <h2>Setup instructions</h2>
