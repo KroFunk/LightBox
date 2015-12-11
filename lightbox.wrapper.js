@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-window.onload = function appendLightBox() {  
+
 // Fetch this scripts location so resources can be located
 var scripts = document.getElementsByTagName('script');
 var path = scripts[scripts.length-1].src.split('?')[0];
@@ -38,7 +38,7 @@ document.getElementById('lightBoxWrapper').innerHTML = '<div id="grey" style="-w
 $('#lightBox').on('mousewheel DOMMouseScroll', function(ev) {
 ev.preventDefault();
 });
-}
+
 
 function openwrapper(url, x, y, border){
 //set border
