@@ -1,40 +1,225 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Lightbox by KroFunk</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
+<HTML>
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>LightBox Demo | &copy; Robin Wright 2015</title>
+<script>
+function ShowHide(id) {
+var element = document.getElementById(id);
+if(element.style.display == "block") {
+element.style.display = "none";
+}
+else {
+element.style.display = "block";
+}
+}
+</script>
+<style>
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #606c71;
+}
+h2 {
+clear:both;
+}
+pre {
+padding:0px;
+margin:0px;
+}
+.demoButton {
+font-size:14px;
+padding:15px;
+margin:0px;
+margin-right:10px;
+margin-bottom:10px;
+display:block;
+float:left;
+color:#fff;
+background:#569AF8;
+border-radius:2px;
+border:1px solid #4D8ADF;
+font-family:sans-serif;
+text-decoration:none;
+text-shadow:1px 1px 1px #333;
+outline:0;
+}
+.codeButton {
+width:105px;
+font-size:14px;
+padding:15px;
+margin:0px;
+margin-right:10px;
+margin-bottom:10px;
+display:block;
+float:left;
+color:#fff;
+background:#bbb;
+border-radius:2px;
+border:1px solid #aaa;
+font-family:sans-serif;
+text-decoration:none;
+text-shadow:1px 1px 1px #333;
+outline:0;
+}
+.tableTitle {
+padding:15px;
+color:#fff;
+background:#FF4843;
+font-family:sans-serif;
+text-decoration:none;
+text-shadow:1px 1px 1px #333;
+}
+.codeTitle {
+padding:15px;
+color:#fff;
+background:#56CB71;
+font-family:sans-serif;
+text-decoration:none;
+text-shadow:1px 1px 1px #333;
+}
+.codeBox {
+border-radius:2px;
+border:1px solid #aaa;
+clear:both;
+}
+.even {
+padding:10px;
+background:#eee;
+overflow:auto;
+}
+.odd {
+padding:10px;
+background:#ccc;
+overflow:auto;
+}
+.footer {
+padding:10px;
+background:#666;
+color:#eee;
+}
+.page-header {
+    padding: 5rem 6rem;
+}
+.page-header {
+    color: #fff;
+    text-align: center;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,569af8+100 */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #569af8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#569af8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#569af8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#569af8',GradientType=0 ); /* IE6-9 */
+
+
+}
+section {
+    display: block;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+	padding: 0.75rem 1rem;
+	text-decoration:none;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+a {
+    color: #1e6bb8;
+    text-decoration: none;
+}
+</style>
+</head>
+<body style="padding:0px; margin:0px; background:#eee;">
     <section class="page-header">
-      <h1 class="project-name">Lightbox</h1>
-      <h2 class="project-tagline">Simple lightbox written in JavaScript</h2>
+      <h1 style="font-size: 3.25rem; margin-top: 0;margin-bottom: 0.1rem;">Robin's LightBox</h1>
+      <h2 style="margin-bottom: 2rem;font-weight: normal;opacity: 0.7;">Simple lightbox written in JavaScript</h2>
       <a href="https://github.com/KroFunk/LightBox" class="btn">View on GitHub</a>
       <a href="https://github.com/KroFunk/LightBox/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/KroFunk/LightBox/tarball/master" class="btn">Download .tar.gz</a>
     </section>
+<div style="width:80%; min-width:800px; border-left:1px solid #ddd; border-right:1px solid #ddd; margin:0 auto; background:#fff;">
+<div style="padding:20px; padding-top:1px;font-size: 1.1rem;">
+<h1>Welcome to Robin&#39;s LightBox Demo!</h1>
+<p>The objective of this LightBox is to be simple, and to stay simple! In it's current state, there are only 4 options; URL, width, height and border.</p>
+<p>LightBox is called from a javascript event. This means you can call LightBox from anything like a button through to an image. For the best results use an 'OnClick' event, but it should work with any of them, you can read more on w3schools: <a href='http://www.w3schools.com/jsref/dom_obj_event.asp' target='_new'>http://www.w3schools.com/jsref/dom_obj_event.asp</a>
+<p>For the latest version, check out LightBox on KroFunk's GitHub: <a href="https://github.com/KroFunk/LightBox" target="_new">https://github.com/KroFunk/LightBox</a></p><p>You can connect with the author on Twitter: <a href="https://twitter.com/KroFunk" target="_new">https://twitter.com/KroFunk</a>.</p>
+<h2>Setup instructions</h2>
+<ul>
+<li>Place the LightBox folder in your web directory.</li>
+<li>Insert the following code into your HTML just before the &lt;/body&gt; tag. (make sure you change "src" to the relative location to your HTML)<pre>&lt;script type="text/javascript" src="Path/To/LightBox/lightbox.wrapper.js"&gt;&lt;/script&gt;</pre></li>
+<li>Setup complete! test LightBox out by copying the examples below.</li>
+<li>In a production environment you should delete this example directory.</li>
+</ul>
+<h2>Basic LightBox:</h2>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://example.com',640,480);">Open LightBox!</a>
+<input type='button' value='View Code!' class='codeButton' href="javascript:void(0)" onclick="ShowHide('basic');if(this.value=='View Code!'){this.value='Hide Code!'}else{this.value='View Code!'}">
+<div id='basic' class='codeBox' style="clear:both;display:none;">
+<div class='codeTitle'>Basic LightBox code</div>
+<div class='even'><pre>&lt;a href="javascript:void(0)" onclick="openwrapper('http://example.com',640,480);"&gt;Open LightBox!&lt;/a&gt;</pre></div>
+</div>
 
-    <section class="main-content">
-      <p>The objective of this LightBox is to be simple, and to stay simple! In it's current state, there are only 4 options; URL, width, height and border.</p>
+<h2>LightBox (different sizes):</h2>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://example.com',800,600);">Open LightBox! (800x600)</a>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://example.com',200,200);">Open LightBox! (200x200)</a>
+<input type='button' value='View Code!' class='codeButton' href="javascript:void(0)" onclick="ShowHide('sizes');if(this.value=='View Code!'){this.value='Hide Code!'}else{this.value='View Code!'}">
+<div id='sizes' class='codeBox' style="clear:both;display:none;">
+<div class='codeTitle'>LightBox (different sizes)</div>
+<div class='even'><pre>&lt;a href="javascript:void(0)" onclick="openwrapper('http://example.com',800,600);"&gt;Open LightBox! (800x600)&lt;/a&gt;</pre></div>
+<div class='odd'><pre>&lt;a href="javascript:void(0)" onclick="openwrapper('http://example.com',200,200);"&gt;Open LightBox! (200x200)&lt;/a&gt;</pre></div>
+</div>
 
-<p>LightBox is called from a javascript event. This means you can call LightBox from anything like a button through to an image. For the best results use an 'OnClick' event, but it should work with any of them, you can read more on w3schools: <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">http://www.w3schools.com/jsref/dom_obj_event.asp</a></p>
+<h2>LightBox with border:</h2>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://example.com',640,480,5);">Open LightBox! (5px border)</a>
+<a class='demoButton' href="javascript:void(0)" onclick="openwrapper('http://example.com',640,480,10);">Open LightBox! (10px border)</a>
+<input type='button' value='View Code!' class='codeButton' href="javascript:void(0)" onclick="ShowHide('borders');if(this.value=='View Code!'){this.value='Hide Code!'}else{this.value='View Code!'}">
+<div id='borders' class='codeBox' style="clear:both;display:none;">
+<div class='codeTitle'>LightBox with border code</div>
+<div class='even'><pre>&lt;a href="javascript:void(0)" onclick="openwrapper('http://example.com',640,480,5);"&gt;Open LightBox! (5px border)&lt;/a&gt;</pre></div>
+<div class='odd'><pre>&lt;a href="javascript:void(0)" onclick="openwrapper('http://example.com',640,480,5);"&gt;Open LightBox! (10px border)&lt;/a&gt;</pre></div>
+</div>
 
-<p>For the latest version, check out LightBox on KroFunk's GitHub: <a href="https://github.com/KroFunk/LightBox">https://github.com/KroFunk/LightBox</a></p>
+<h2>In depth look at what is going on:</h2>
+<p>It is assumed from this point on that you have a basic understanding of HTML and what an 'a' tag is. What is covered is the javascript event and what the script is doing. I will do this by colour coding the link used to open LightBox and breaking down what each part is doing.</p>
 
-<p>You can connect with the author on Twitter: <a href="https://twitter.com/KroFunk">https://twitter.com/KroFunk</a>.</p>
+<div id='borders' class='codeBox' style="clear:both;">
+<div class='codeTitle'>LightBox example breakdown</div>
+<div class='even'><pre>&lt;a <span style='color:red;'>href="javascript:void(0)"</span> <span style='color:green;'>onclick</span>="<span style='color:blue;'>openwrapper</span>(<span style='color:orange;'>'http://example.com',800,600,5</span>);"&gt;Open LightBox!&lt;/a&gt;</pre></div>
+</div>
+<br/>
+<div id='borders' class='codeBox' style="clear:both;">
+<div class='tableTitle'>Explanation</div>
+<table cellpadding='10' cellspacing='0'>
+<tr style='color:#fff; background:#666;'><td style=''><div>Colour</div></td><td style='width:240px;'>Name</div></td><td>Purpose</div></td></tr>
+<tr class='even'><td><span style='color:red;'>Red</span></td><td>Hypertext Reference</td><td>The value of this attribute is typically used to direct the browser to another page or another location on the current page. We want the page to stay where it is so we set javascript:void(0)</td></tr>
+<tr class='odd'><td><span style='color:green;'>Green</span></td><td>HTML DOM Event</td><td>This is the type of event that will trigger a function. We want something to happen when something is clicked.</td></tr>
+<tr class='even'><td><span style='color:blue;'>Blue</span></td><td>JavaScript function invocation</td><td>'openwrapper' is the name of a function that exists within lightbox.wrapper.js. We want to execute this function.</td></tr>
+<tr class='odd'><td><span style='color:orange;'>Orange</span></td><td>Function Variables</td><td>A variable is something that can change either by design or by user input. In this case we have 4 variables; URL, Width, Height and Border. Changing these values will affect the resulting LightBox.</td></tr>
+</table>
+</div>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/KroFunk/LightBox">Lightbox</a> is maintained by <a href="https://github.com/KroFunk">KroFunk</a>.</span>
+<p style="clear:both;margin:0px;padding:0px;"></p>
+</div>
+<div class='footer'>&copy 2016 Robin Paul Wright, released under the MIT license.</div>
+</div>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
 
-    </section>
 
-  
-  </body>
-</html>
+
+
+
+<script type="text/javascript" src="lightbox.wrapper.js"></script>
+</body>
+</HTML>
