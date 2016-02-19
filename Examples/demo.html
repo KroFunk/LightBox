@@ -14,7 +14,11 @@ element.style.display = "block";
 </script>
 <style>
 body {
-font-family:sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #606c71;
 }
 h2 {
 clear:both;
@@ -94,11 +98,60 @@ padding:10px;
 background:#666;
 color:#eee;
 }
+.page-header {
+    padding: 5rem 6rem;
+}
+.page-header {
+    color: #fff;
+    text-align: center;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,569af8+100 */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(top,  #1e5799 0%, #569af8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1e5799 0%,#569af8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1e5799 0%,#569af8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#569af8',GradientType=0 ); /* IE6-9 */
+
+
+}
+section {
+    display: block;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+	padding: 0.75rem 1rem;
+	text-decoration:none;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+a {
+    color: #1e6bb8;
+    text-decoration: none;
+}
 </style>
 </head>
 <body style="padding:0px; margin:0px; background:#eee;">
+    <section class="page-header">
+      <h1 style="font-size: 3.25rem; margin-top: 0;margin-bottom: 0.1rem;">Robin's LightBox</h1>
+      <h2 style="margin-bottom: 2rem;font-weight: normal;opacity: 0.7;">Simple lightbox written in JavaScript</h2>
+      <a href="https://github.com/KroFunk/LightBox" class="btn">View on GitHub</a>
+      <a href="https://github.com/KroFunk/LightBox/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/KroFunk/LightBox/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 <div style="width:80%; min-width:800px; border-left:1px solid #ddd; border-right:1px solid #ddd; margin:0 auto; background:#fff;">
-<div style="padding:20px;">
+<div style="padding:20px; padding-top:1px;font-size: 1.1rem;">
 <h1>Welcome to Robin&#39;s LightBox Demo!</h1>
 <p>The objective of this LightBox is to be simple, and to stay simple! In it's current state, there are only 4 options; URL, width, height and border.</p>
 <p>LightBox is called from a javascript event. This means you can call LightBox from anything like a button through to an image. For the best results use an 'OnClick' event, but it should work with any of them, you can read more on w3schools: <a href='http://www.w3schools.com/jsref/dom_obj_event.asp' target='_new'>http://www.w3schools.com/jsref/dom_obj_event.asp</a>
@@ -159,7 +212,7 @@ color:#eee;
 
 <p style="clear:both;margin:0px;padding:0px;"></p>
 </div>
-<div class='footer'>&copy 2015 Robin Paul Wright, released under the MIT license.</div>
+<div class='footer'>&copy 2016 Robin Paul Wright, released under the MIT license.</div>
 </div>
 
 
