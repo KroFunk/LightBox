@@ -32,7 +32,7 @@ var mydir = path.split('/').slice(0, -1).join('/')+'/';
 var lightBox = document.createElement("div");
 lightBox.id = 'lightBoxWrapper';
 document.body.appendChild(lightBox);
-document.getElementById('lightBoxWrapper').innerHTML = '<div id="grey" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;position:fixed; left:-5%; top:-5%; opacity:0.4; background:#000; width:110%; height:110%; display: none; visibility: hidden;" onclick="closewrapper();">&nbsp;</div><div id="lightBoxwrapper" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;background-color:rgba(255,255,255,0); border-radius: 0px; padding:0px; position: fixed; left: 50%; top: 50%; z-index: 999999; width:0px; height:0px; margin-left:0px; margin-top:0px; display: none; visibility: hidden;"><a href="javascript:void(0);" onclick="closewrapper();"><img id="lightBoxX" src="'+mydir+'X.png" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;position:relative; top:-0px; left:0px; border:0 none;"></a><div id="lightBoxBorder" style="overflow: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch;-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; background:#171A1C; border-radius:2px; margin-top:-10px;"><iframe id="lightBox" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; border:0 none; height:220px; width:100%;" border="0" frameborder="0"></iframe></div></div>';
+document.getElementById('lightBoxWrapper').innerHTML = '<div id="grey" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;position:fixed; left:-5%; top:-5%; opacity:0.4; background:#000; width:110%; height:110%; display: none; visibility: hidden;" onclick="closewrapper();">&nbsp;</div><div id="lightBoxwrapper" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;background-color:rgba(255,255,255,0); border-radius: 0px; padding:0px; position: fixed; left: 50%; top: 50%; z-index: 999999; width:0px; height:0px; margin-left:0px; margin-top:0px; display: none; visibility: hidden;"><a href="javascript:void(0);" onclick="closewrapper();"><img id="lightBoxX" src="'+mydir+'X.png" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s;position:relative; top:-0px; left:0px; border:0 none;"></a><div id="lightBoxBorder" style="overflow: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch;-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; background:#ccc; border-radius:2px; margin-top:-10px;"><iframe id="lightBox" style="-webkit-transition: 0.5s; -moz-transition: 0.5s; transition: 0.5s; border:0 none; height:220px; width:100%;" border="0" frameborder="0"></iframe></div></div>';
 
 // Stop scroll event 'bubble' - requires jQuery
 
@@ -41,7 +41,7 @@ document.getElementById('lightBoxWrapper').innerHTML = '<div id="grey" style="-w
 function openwrapper(url, x, y, border){
 //set border
 if(typeof border === 'number') {
-document.getElementById("lightBoxBorder").style.border = border+"px solid #393d42";
+document.getElementById("lightBoxBorder").style.border = border+"px solid #ccc";
 }
 else {
 document.getElementById("lightBoxBorder").style.border = "none";
